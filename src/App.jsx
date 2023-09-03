@@ -11,13 +11,6 @@ function App() {
   const footRef = useRef();
 
   useEffect(() => {
-    const mainObserver = new IntersectionObserver(
-      ([mainEntry]) => {
-        setIsMain(mainEntry.isIntersecting);
-      },
-      { rootMargin: "-300px" }
-    );
-
     const headObserver = new IntersectionObserver(
       ([headEntry]) => {
         setIsHead(headEntry.isIntersecting);
@@ -25,9 +18,16 @@ function App() {
       { rootMargin: "-300px" }
     );
 
+    const mainObserver = new IntersectionObserver(
+      ([mainEntry]) => {
+        setIsMain(mainEntry.isIntersecting);
+      },
+      { rootMargin: "-300px" }
+    );
+
     const footObserver = new IntersectionObserver(
-      ([headEntry]) => {
-        setIsFoot(headEntry.isIntersecting);
+      ([FootEntry]) => {
+        setIsFoot(FootEntry.isIntersecting);
       },
       { rootMargin: "-300px" }
     );
