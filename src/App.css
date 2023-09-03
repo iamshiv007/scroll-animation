@@ -54,7 +54,7 @@ main div {
   transition: all ease-in 0.7s;
 }
 
-.bounce {
+.text-slide {
   transform: translateX(0) !important;
   opacity: 1 !important;
 }

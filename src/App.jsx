@@ -45,9 +45,9 @@ function App() {
 
   useEffect(() => {
     if (isHead) {
-      headRef.current.classList.add("bounce");
+      headRef.current.classList.add("text-slide");
     } else {
-      headRef.current.classList.remove("bounce");
+      headRef.current.classList.remove("text-slide");
     }
     if (isMain) {
       mainRef.current.querySelectorAll("div").forEach((el) => {
@@ -59,9 +59,9 @@ function App() {
       });
     }
     if (isFoot) {
-      footRef.current.classList.add("bounce");
+      footRef.current.classList.add("text-slide");
     } else {
-      footRef.current.classList.remove("bounce");
+      footRef.current.classList.remove("text-slide");
     }
   }, [isMain, isHead, isFoot]);
 
