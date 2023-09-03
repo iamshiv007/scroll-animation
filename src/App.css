@@ -19,21 +19,21 @@ body {
 
 header,
 footer {
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   height: 100vh;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all ease-in 0.7s;
+  transform: translateX(-200px);
+  opacity: 0.2;
 }
 
 footer {
   margin-top: 50px;
-  box-shadow: -3px -5px 5px rgba(0, 0, 0, 0.3);
 }
 
 main {
-  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3), -3px -5px 5px rgba(0, 0, 0, 0.3);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -51,9 +51,24 @@ main div {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  transition: all ease-in 1s;
+  transition: all ease-in 0.7s;
+}
+
+.bounce {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
 }
 
 .slide-in {
   transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+main div:first-child {
+  transform: translateX(-150%);
+  opacity: 0;
+}
+main div:last-child {
+  transform: translateX(150%);
+  opacity: 0;
 }
